@@ -1,0 +1,49 @@
+@mixin pre($name,$value){
+       -webkit-#{$name}: #{$value};
+       -moz-#{$name}: #{$value};
+       -o-#{$name}: #{$value};
+       #{$name}: #{$value};
+}
+@mixin hind($name,$value){
+       #{$name}: -webkit-#{$value};
+       #{$name}: -moz-#{$value};
+       #{$name}: -o-#{$value};
+       #{$name}: #{$value};
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+
+@mixin xs {
+    @media screen and(max-width:767px) {
+        @content;
+    }
+}
+@mixin sm {
+    @media (min-width: 767px) and (max-width: 991px) {
+        @content;
+    }
+}
+@mixin md {
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @content;
+    }
+}
+@mixin lg {
+    @media screen and(min-width:1200px) {
+        @content;
+    }
+}

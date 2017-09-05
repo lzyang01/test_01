@@ -1,0 +1,89 @@
+@import 'mixin';
+@import 'style';
+@import 'nav';
+
+
+
+.header {
+	background-color: #ffa95e; position: relative; padding: 1.5rem;
+	.left {
+		position: absolute; top: 1.5rem; left: 1.5rem; font-size: 12px; text-align: center; display: block;
+		img {
+			display: block; margin-bottom: 2px;
+		}
+	}
+	.right {
+		position: absolute; top: 1.5rem; right: 1.5rem; font-size: 12px; text-align: center; display: block;
+		img {
+			display: block; margin-bottom: 2px;
+		}
+	}
+	.infos {
+		background-color: #fff; border-radius: 5px; margin: 7rem 0 -8rem 0; position: relative; padding: 60px 10px 10px 10px; @include pre(box-shadow,0 5px 10px #B9B7B7);
+		img {
+			border-radius: 50%; display: block; position: absolute; top: -54px; left: 50%; margin-left: -54px;
+		}
+		span {
+			font-size: 2.5rem; display: block; text-align: center;
+		}
+		ul {
+			overflow: hidden; margin: 2rem 0;
+			li {
+				width: 33.3%; text-align: center; float: left;
+				b {
+					display: block; color: #ffa95e; font-size: 2rem; margin-bottom: 5px;
+				}
+			}
+		}
+	}
+} 
+.gridBox {
+	overflow: hidden; margin: 9rem 0 2rem 0;
+	li {
+		width: 25%; float: left; text-align: center; margin: 10px 0;
+		a {
+			color: #383838;
+			span {
+				display: block;
+			}
+		}
+	}
+}
+.menuBox {
+	li {
+		border-top: 1px solid #DCDCDC; padding: 1rem; font-size: 1.8rem; line-height: 2.6rem;
+		a {
+			color: #383838;
+			img {
+				vertical-align: top; margin-right: 5px;
+			}
+		}
+	}
+}
+.scroll {
+	border: 1px solid #ffa65e; @include pre(box-shadow,0 0 5px #ffa65e); font-size: 12px; display: block; line-height: 58px; float: left; position: fixed; left: 0; top: 50%; margin-top: -30px; border-radius: 0 60px 60px 0; padding-right: 10px; background-color: #fff;
+	span {
+		background-color: #ffa65e; color: #fff; padding: 5px; width: 24px; display: block; line-height: 17px; float: left; margin-right: 5px;
+	}
+}
+
+
+
+.top {
+	border-bottom: 1px solid #c5c6c6; text-align: center; line-height: 4rem; font-size: 2rem; position: relative;
+	.return {
+		position: absolute; top: 10px; left: 10px;
+	}
+	.del,.edit {
+		position: absolute; top: 10px;
+		&.del {
+			right: 10px;
+		}
+		&.edit {
+			right: 50px;
+		}
+		img {
+			vertical-align: middle; margin: 0 2rem; display: inline-block;
+		}
+	}
+}
